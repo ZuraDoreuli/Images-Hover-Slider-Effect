@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.images-container {
+  display: flex;
+}
+.image-box {
+  position: relative;
+  flex-basis: calc(33.333%);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  border-right: 1px solid #000;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+.images-container:hover .image-box {
+  flex-basis: calc(20%);
+}
+.images-container:hover .image-box:hover {
+  flex-basis: calc(60%);
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+}
